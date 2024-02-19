@@ -1,0 +1,1 @@
+This should trigger a pipeline in the GitLab project: https://gitlab.com/gl-demo-ultimate-smorris/playgrounds/github-trigger
