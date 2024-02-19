@@ -1,3 +1,1 @@
-This project uses GH as the SSOT for SCM at this project: https://github.com/cupofpython/gitlab-trigger
-
-It uses a GitLab pipeline trigger token (Settings -> CI/CD) and a job in GitHub Actions to trigger GitLab for CI/CD.
+This project has GitHub as the SSOT. When a PR is opened (or any push) the GitLab repo is updated (pull mirror) and GitLab pipeline is run via a GitHub Action.
