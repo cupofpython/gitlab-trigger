@@ -9,5 +9,5 @@ jobs:
       run: |
         curl --request POST \
         --form token=${{ secrets.TOKEN }} \
-        --form ref=${{ GITHUB_REF }} \
+        --form ref=${GITHUB_REF##*/} \
           "https://gitlab.com/api/v4/projects/55093078/trigger/pipeline"
