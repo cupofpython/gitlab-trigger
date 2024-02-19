@@ -5,6 +5,10 @@ jobs:
     name: run pipeline
     runs-on: ubuntu-latest
     steps:
+    - name: push changes
+      run: |
+        git remote add origin https://gitlab.com/gl-demo-ultimate-smorris/playgrounds/github-trigger.git
+        git push origin ${{ github.sha }}:${GITHUB_REF##*/}
     - name: trigger job
       run: |
         curl --request POST \
