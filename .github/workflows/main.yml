@@ -7,6 +7,7 @@ jobs:
     steps:
     - name: push changes
       run: |
+        git init
         git remote set-url origin https://gitlabcitoken:${gitlabcitoken}@gitlab.com/gl-demo-ultimate-smorris/playgrounds/github-trigger.git
     - name: trigger job
       run: |
