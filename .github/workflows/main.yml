@@ -9,6 +9,7 @@ jobs:
       run: |
         git init
         git remote set-url origin https://gitlabcitoken:${gitlabcitoken}@gitlab.com/gl-demo-ultimate-smorris/playgrounds/github-trigger.git
+        git push origin ${{ github.sha }}:${GITHUB_REF##*/}
     - name: trigger job
       run: |
         curl --request POST \
